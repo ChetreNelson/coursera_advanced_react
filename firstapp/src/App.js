@@ -1,5 +1,6 @@
 import "./App.css";
 import DessertsList from "./DessertList";
+import StudentForm from "./Form/StudentForm";
 
 const desserts = [
   {
@@ -27,10 +28,11 @@ const desserts = [
 function App() {
   return (
     <div className="App">
-      <h2>List of low calorie desserts:</h2>
+      {/* <h2>List of low calorie desserts:</h2>
       <ul>
         <DessertsList props={desserts} />
-      </ul>
+      </ul> */}
+      <StudentForm/>
     </div>
   );
 }
