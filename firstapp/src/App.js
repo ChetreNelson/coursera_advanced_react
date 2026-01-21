@@ -1,4 +1,6 @@
 import "./App.css";
+import { Header, Page } from "./Context";
+import { useTheme } from "./Context/utils/contexts";
 import DessertsList from "./DessertList";
 import StudentForm from "./Form/StudentForm";
 
@@ -26,13 +28,24 @@ const desserts = [
 ];
 
 function App() {
+  const { theme } = useTheme();
+
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        backgroundColor: theme === "light" ? "white" : "black",
+      }}
+    >
       {/* <h2>List of low calorie desserts:</h2>
       <ul>
         <DessertsList props={desserts} />
       </ul> */}
-      <StudentForm/>
+      {/* <StudentForm/>
+       */}
+
+      <Header />
+      <Page />
     </div>
   );
 }
