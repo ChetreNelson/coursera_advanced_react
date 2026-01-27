@@ -3,6 +3,7 @@ import { Header, Page } from "./Context";
 import { useTheme } from "./Context/utils/contexts";
 import DessertsList from "./DessertList";
 import StudentForm from "./Form/StudentForm";
+import GiftCard from "./Hooks/useState/GiftCard";
 
 const desserts = [
   {
@@ -46,6 +47,7 @@ function App() {
 
       <Header />
       <Page />
+      <GiftCard/>
     </div>
   );
 }
