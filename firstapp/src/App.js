@@ -3,6 +3,7 @@ import { Header, Page } from "./Context";
 import { useTheme } from "./Context/utils/contexts";
 import DessertsList from "./DessertList";
 import StudentForm from "./Form/StudentForm";
+import RandomUser from "./Hooks/fetchData";
 import GiftCard from "./Hooks/useState/GiftCard";
 
 const desserts = [
@@ -32,7 +33,8 @@ function App() {
   const { theme } = useTheme();
 
   return (
-    <div
+    <>
+    {/* <div
       className="App"
       style={{
         backgroundColor: theme === "light" ? "white" : "black",
@@ -45,10 +47,14 @@ function App() {
       {/* <StudentForm/>
        */}
 
-      <Header />
+      {/* <Header />
       <Page />
-      <GiftCard/>
-    </div>
+      <GiftCard/> */}
+    {/* </div> */} 
+
+    <RandomUser/>
+    </>
+    
   );
 }
 
