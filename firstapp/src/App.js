@@ -5,10 +5,16 @@ import DessertsList from "./DessertList";
 import StudentForm from "./Form/StudentForm";
 import CustomConsoleLogHook from "./Hooks/custom";
 import CustomHookAssignment from "./Hooks/custom/assignment";
+import useOnlineStatus from "./Hooks/custom/useStatusBar";
 import RandomUser from "./Hooks/fetchData";
 import ReducerHook from "./Hooks/useReducer";
 import RefHook from "./Hooks/useRef";
 import GiftCard from "./Hooks/useState/GiftCard";
+
+function StatusBar() {
+  const isOnline = useOnlineStatus();
+  return <h1>{isOnline ? "✅ Online" : "❌ Disconnected"}</h1>;
+}
 
 const desserts = [
   {
@@ -38,6 +44,7 @@ function App() {
 
   return (
     <>
+      <StatusBar />
       {/* <div
       className="App"
       style={{
@@ -60,7 +67,7 @@ function App() {
       {/* <ReducerHook/> */}
       {/* <RefHook /> */}
       {/* <CustomConsoleLogHook /> */}
-      <CustomHookAssignment/>
+      {/* <CustomHookAssignment/>    */}
     </>
   );
 }
