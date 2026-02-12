@@ -4,6 +4,7 @@ import { useTheme } from "./Context/utils/contexts";
 import DessertsList from "./DessertList";
 import StudentForm from "./Form/StudentForm";
 import CustomConsoleLogHook from "./Hooks/custom";
+import CustomHookAssignment from "./Hooks/custom/assignment";
 import RandomUser from "./Hooks/fetchData";
 import ReducerHook from "./Hooks/useReducer";
 import RefHook from "./Hooks/useRef";
@@ -58,7 +59,8 @@ function App() {
       {/* <RandomUser/> */}
       {/* <ReducerHook/> */}
       {/* <RefHook /> */}
-      <CustomConsoleLogHook />
+      {/* <CustomConsoleLogHook /> */}
+      <CustomHookAssignment/>
     </>
   );
 }
