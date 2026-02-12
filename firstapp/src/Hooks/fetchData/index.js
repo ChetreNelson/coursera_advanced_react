@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const RandomUser = () => {
   const [user, setUser] = useState("");
   const fetchData = () => {
-    fetch("https://randomuser.me/api/?results=1")
+    fetch("http://randomuser.me/api/?results=1")
       .then((resp) => resp.json())
       .then((data) => setUser(data));
   };

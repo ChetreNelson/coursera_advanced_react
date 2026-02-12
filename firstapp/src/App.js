@@ -4,6 +4,7 @@ import { useTheme } from "./Context/utils/contexts";
 import DessertsList from "./DessertList";
 import StudentForm from "./Form/StudentForm";
 import RandomUser from "./Hooks/fetchData";
+import ReducerHook from "./Hooks/useReducer";
 import GiftCard from "./Hooks/useState/GiftCard";
 
 const desserts = [
@@ -52,7 +53,8 @@ function App() {
       <GiftCard/> */}
     {/* </div> */} 
 
-    <RandomUser/>
+    {/* <RandomUser/> */}
+    <ReducerHook/>
     </>
     
   );
